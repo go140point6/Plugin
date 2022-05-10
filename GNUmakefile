@@ -38,7 +38,7 @@ gomod: ## Ensure plugin's go dependencies are installed.
 
 .PHONY: yarndep
 yarndep: ## Ensure all yarn dependencies are installed
-	yarn install --frozen-lockfile
+	yarn install --frozen-lockfile --network-timeout 600000
 	./tools/bin/restore-solc-cache
 
 .PHONY: install-plugin
